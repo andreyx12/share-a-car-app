@@ -1,22 +1,40 @@
 name: Flutter CD flow IOS
 
-# This workflow is triggered on pushes to the repository.
-
 on:
   push:
     branches:
     - main
 
 jobs:
-  macos:
+  Build:
     runs-on: macOS-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Build and Test
-        run: swift test
-        env:
-          DEVELOPER_DIR: /Applications/Xcode_11.4.app/Contents/Developer
+    - name: Dump file hierarchy
+      run: ls -R
+    - uses: actions/checkout@v1
+
+    - name: Select Xcode
+    run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+    - name: Xcode version
+    run: /usr/bin/xcodebuild -version
+    - name: Build archive
+    run: |
+      xcodebuild -sdk iphoneos -project CocoaHeadsNL/CocoaHeadsNL.xcodeproj \
+        -configuration Release -scheme CocoaHeadsNL \
+        -derivedDataPath DerivedData \
+        -archivePath DerivedData/Archive/CocoaHeadsNL archive
+    - name: Export Archive
+    run: |
+      xcodebuild -exportArchive \
+        -archivePath DerivedData/Archive/CocoaHeadsNL.xcarchive \
+        -exportOptionsPlist provisioning/App-Store.plist \
+        -exportPath DerivedData/ipa
+
+    # Setup the flutter environment.
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'dev' # 'dev', 'alpha', default to: 'stable'
+        # flutter-version: '1.12.x' # you can also specify exact version of flutter
 
     # Get flutter dependencies.
       - run: flutter pub get
