@@ -31,7 +31,7 @@ jobs:
         name: debug-apk
         path: build/app/outputs/apk/debug/app-debug.apk
 
-    - run: flutter build ios --release --no-codesig
+    - run: flutter build ios --release --no-codesign
 
     - uses: actions/upload-artifact@v1
       with:
