@@ -1,5 +1,5 @@
 on: push
-name: Build and Release apk
+name: Build APK
 jobs:
   build:
     name: Build APK
@@ -16,7 +16,7 @@ jobs:
     - run: flutter test
     - run: flutter build apk --debug --split-per-abi
     - name: Create a Release APK
-      uses: andreyx12/share-a-car-app
+      uses: andreyx12/share-a-car-app@main
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
         token: ${{ secrets.TOKEN }}
