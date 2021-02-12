@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Color.fromRGBO(63, 63, 156, 1.0),
+            Color.fromRGBO(63, 62, 156, 1.0),
             Color.fromRGBO(90, 70, 178, 1.0),
           ]
         )
