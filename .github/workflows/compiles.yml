@@ -1,11 +1,11 @@
 on: push
-name: Build APK
+name: Build APKs
 jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
