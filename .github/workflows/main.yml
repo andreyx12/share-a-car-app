@@ -1,4 +1,4 @@
-name: Flutter CD IOS
+name: Flutter CD Android & IOS
 
 on:
   push:
@@ -9,8 +9,6 @@ jobs:
   Build:
     runs-on: macOS-latest
     steps:
-    - name: Dump file hierarchy
-      run: ls -R
     - uses: actions/checkout@v1
 
     - name: Select Xcode
@@ -21,18 +19,21 @@ jobs:
     # Setup the flutter environment.
     - uses: subosito/flutter-action@v1
       with:
-        channel: 'dev' # 'dev', 'alpha', default to: 'stable'
-        # flutter-version: '1.12.x' # you can also specify exact version of flutter
+        channel: 'dev'
 
     # Get flutter dependencies.
     - run: flutter pub get
     
-    # Build apk.
-    # - run: flutter build apk --debug
-    
     - run: flutter build ios --release --no-codesign
+
+    - run: flutter build apk --debug
 
     - uses: actions/upload-artifact@v1
       with:
-        name: ios-build
-        path: build/ios/iphoneos/Runner.app
+        name: debug-ipa
+        path: build/ios/iphoneos/Runner.app.
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: debug-apk
+        path: build/app/outputs/apk/debug/app-debug.apk
