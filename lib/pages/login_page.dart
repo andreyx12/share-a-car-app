@@ -119,7 +119,7 @@ class LoginPage extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 icon: Icon(Icons.alternate_email, color: Colors.green),
-                hintText: 'sample@gmail.com',
+                hintText: 'sampletest@gmail.com',
                 labelText: 'Correo electrónico',
               ),
               //onChanged: (value) => bloc.changeEmail(value),
