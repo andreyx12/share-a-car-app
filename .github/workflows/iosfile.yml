@@ -19,17 +19,17 @@ jobs:
           DEVELOPER_DIR: /Applications/Xcode_11.4.app/Contents/Developer
 
     # Get flutter dependencies.
-    - run: flutter pub get
+      - run: flutter pub get
     
     # Build apk.
     # - run: flutter build apk --debug
     
-    - run: flutter build ios --release --no-codesign
+      - run: flutter build ios --release --no-codesign
 
-    - uses: actions/upload-artifact@v1
-      with:
-        name: ios-build
-        path: build/ios/iphoneos
+      - uses: actions/upload-artifact@v1
+        with:
+          name: ios-build
+          path: build/ios/iphoneos
 
 # name: Flutter CD flow Android & IOS
 
