@@ -16,7 +16,7 @@ jobs:
     - run: flutter test
     - run: flutter build apk --debug --split-per-abi
     - name: Create a Release APK
-      uses: andreyx12/release-action@v1
+      uses: andreyx12/release-action
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
         token: ${{ secrets.TOKEN }}
