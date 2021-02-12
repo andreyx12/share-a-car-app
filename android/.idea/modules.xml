@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1793817948/android.flutter_plugin_android_lifecycle.iml" filepath="$PROJECT_DIR$/.idea/modules/1793817948/android.flutter_plugin_android_lifecycle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/58625976/android.geolocator.iml" filepath="$PROJECT_DIR$/.idea/modules/58625976/android.geolocator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/219367096/android.google_api_availability.iml" filepath="$PROJECT_DIR$/.idea/modules/219367096/android.google_api_availability.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1257607287/android.google_maps_flutter.iml" filepath="$PROJECT_DIR$/.idea/modules/-1257607287/android.google_maps_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/95522373/android.location_permissions.iml" filepath="$PROJECT_DIR$/.idea/modules/95522373/android.location_permissions.iml" />
+    </modules>
+  </component>
+</project>
