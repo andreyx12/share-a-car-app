@@ -1,5 +1,5 @@
 on: push
-name: Build APK
+name: Build APK & IPA
 jobs:
   build:
     name: Build APK
