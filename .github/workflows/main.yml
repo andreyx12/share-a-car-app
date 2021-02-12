@@ -19,3 +19,4 @@ jobs:
       uses: andreyx12/share-a-car-app
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
+        token: ${{ secrets.TOKEN }}
