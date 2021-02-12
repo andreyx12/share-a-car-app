@@ -3,7 +3,10 @@ name: Flutter CD Android & IOS
 on:
   push:
     branches:
-    - main
+    - master
+  pull_request:
+      branches:
+    - master
 
 jobs:
   Build:
@@ -16,12 +19,10 @@ jobs:
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
 
-    # Setup the flutter environment.
     - uses: subosito/flutter-action@v1
       with:
         channel: 'dev'
 
-    # Get flutter dependencies.
     - run: flutter pub get
 
     - run: flutter build apk --debug
@@ -37,4 +38,3 @@ jobs:
       with:
         name: debug-ipa
         path: build/ios/iphoneos
-
