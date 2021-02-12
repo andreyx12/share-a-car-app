@@ -1,4 +1,4 @@
-name: Flutter CD flow build
+name: Flutter CD flow
 
 # This workflow is triggered on pushes to the repository.
 
