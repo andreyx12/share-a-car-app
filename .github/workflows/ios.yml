@@ -1,0 +1,38 @@
+name: Flutter CD IOS
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  Build:
+    runs-on: macOS-latest
+    steps:
+    - name: Dump file hierarchy
+      run: ls -R
+    - uses: actions/checkout@v1
+
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+    - name: Xcode version
+      run: /usr/bin/xcodebuild -version
+
+    # Setup the flutter environment.
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'dev' # 'dev', 'alpha', default to: 'stable'
+        # flutter-version: '1.12.x' # you can also specify exact version of flutter
+
+    # Get flutter dependencies.
+    - run: flutter pub get
+    
+    # Build apk.
+    # - run: flutter build apk --debug
+    
+    - run: flutter build ios --release --no-codesign
+
+    - uses: actions/upload-artifact@v1
+      with:
+        name: ios-build
+        path: build/ios/iphoneos/Runner.app
