@@ -1,0 +1,37 @@
+[
+  {
+    "type": "ModalStatus.init",
+    "maxHeight": 95.0,
+    "isSwipeable": false
+  },
+  {
+    "type": "ModalStatus.licenseNotRegistered",
+    "maxHeight": 95.0,
+    "isSwipeable": false
+  },
+  {
+    "type": "ModalStatus.selectedMarker",
+    "maxHeight": 410.0,
+    "isSwipeable": true
+  },
+  {
+    "type": "ModalStatus.reservationProcess",
+    "maxHeight": 245.0,
+    "isSwipeable": true
+  },
+  {
+    "type": "ModalStatus.routeInProgresss",
+    "maxHeight": 245.0,
+    "isSwipeable": true
+  },
+  {
+    "type": "ModalStatus.finishingTrip",
+    "maxHeight": 95.0,
+    "isSwipeable": false
+  },
+  {
+    "type": "ModalStatus.routeFinished",
+    "maxHeight": 245.0,
+    "isSwipeable": false
+  }
+]
