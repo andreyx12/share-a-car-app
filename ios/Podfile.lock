@@ -1,4 +1,6 @@
 PODS:
+  - countdown_flutter (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
   - "geolocator (5.3.2+2)":
     - Flutter
@@ -10,36 +12,64 @@ PODS:
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
+  - images_picker (0.0.1):
+    - Flutter
+    - ZLPhotoBrowser (= 4.1.3)
   - "location_permissions (3.0.0+1)":
     - Flutter
+  - "permission_handler (5.0.1+1)":
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+  - ZLPhotoBrowser (4.1.3):
+    - ZLPhotoBrowser/Core (= 4.1.3)
+  - ZLPhotoBrowser/Core (4.1.3)
 
 DEPENDENCIES:
+  - countdown_flutter (from `.symlinks/plugins/countdown_flutter/ios`)
   - Flutter (from `Flutter`)
   - geolocator (from `.symlinks/plugins/geolocator/ios`)
   - google_maps_flutter (from `.symlinks/plugins/google_maps_flutter/ios`)
+  - images_picker (from `.symlinks/plugins/images_picker/ios`)
   - location_permissions (from `.symlinks/plugins/location_permissions/ios`)
+  - permission_handler (from `.symlinks/plugins/permission_handler/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
 
 SPEC REPOS:
   trunk:
     - GoogleMaps
+    - ZLPhotoBrowser
 
 EXTERNAL SOURCES:
+  countdown_flutter:
+    :path: ".symlinks/plugins/countdown_flutter/ios"
   Flutter:
     :path: Flutter
   geolocator:
     :path: ".symlinks/plugins/geolocator/ios"
   google_maps_flutter:
     :path: ".symlinks/plugins/google_maps_flutter/ios"
+  images_picker:
+    :path: ".symlinks/plugins/images_picker/ios"
   location_permissions:
     :path: ".symlinks/plugins/location_permissions/ios"
+  permission_handler:
+    :path: ".symlinks/plugins/permission_handler/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
 
 SPEC CHECKSUMS:
-  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  countdown_flutter: 423a4cc24614ccb078c2ce4ac6739b1d85cbe98b
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   geolocator: f7622e0e7e2a24718285b73916d60c4a54b9f5b6
   google_maps_flutter: c7f9c73576de1fbe152a227bfd6e6c4ae8088619
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  images_picker: eb05ebd660218fba40842f7d26bc75d946c682e5
   location_permissions: 7e0f9aa0f60deb8ff93ddf0e2a164c7e8197bc94
+  permission_handler: eac8e15b4a1a3fba55b761d19f3f4e6b005d15b6
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  ZLPhotoBrowser: 559062abac47b41ef140cff6ea2370e73623b05f
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: fe0e1ee7f3d1f7d00b11b474b62dd62134535aea
 
 COCOAPODS: 1.10.1

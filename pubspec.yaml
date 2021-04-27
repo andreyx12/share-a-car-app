@@ -24,10 +24,15 @@ dependencies:
   flutter:
     sdk: flutter
 
+  intl:
+
+  shared_preferences: ^2.0.5
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+
+  permission_handler: 5.0.1+1
 
   google_maps_flutter: ^1.2.0
 
@@ -35,17 +40,25 @@ dependencies:
 
   flutter_polyline_points: ^0.2.1
 
-  provider: ^4.3.3
+  provider: ^5.0.0
 
-  flutter_bloc: ^6.1.1
+  flutter_bloc: ^7.0.0
 
-  bloc: ^6.1.1
+  bloc: ^7.0.0
 
-  flutter_countdown_timer: ^3.0.0
+  countdown_flutter: ^0.1.2
 
   flutter_native_splash: ^0.2.11
 
   flutter_launcher_icons: ^0.8.1
+
+  sliding_up_panel: ^1.0.2
+  
+  images_picker: ^1.0.0
+
+  ticketview: ^1.0.0
+
+  carousel_slider: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -61,7 +74,6 @@ flutter_icons:
 
 # The following section is specific to Flutter.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -70,6 +82,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/json/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
